@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,15 +12,30 @@ const Menu = () => {
         <div className="menu">
             <div className="menu-container">
                 <div className="menu-logo">
-                    <img src="tym.png" alt="Logo" />
+                    <Link to="/">
+                        <img src="tym.png" alt="Logo" />
+                    </Link>
                 </div>
                 <div className={`menu-list ${isMenuOpen ? 'active' : ''}`}>
 
-                    <li><a href="#">HAKKIMIZDA</a></li>
-                    <li><a href="#">PROJELER</a></li>
-                    <li><a href="#">UYGULAMALAR</a></li>
-                    <li><a href="#">GALERI</a></li>
-                    <li><a href="#">ILETISIM</a></li>
+                    <li><Link to="/aboutus">HAKKIMIZDA</Link></li>
+                    <li>
+                        <Link to="/">PROJELER</Link>
+                        <ul className="submenu">
+                            <li><Link to="/">Mimari Projelerimiz</Link></li>
+                            <li><Link to="/">3D Gorsellestirme</Link></li>
+                            <li><Link to="/">Cephe Tasarim</Link></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <Link to="/">UYGULAMALAR</Link>
+                        <ul className="submenu">
+                            <li><Link to="/">Puskurtme Granit</Link></li>
+                            <li><Link to="/">Izolasyon</Link></li>
+                        </ul>
+                    </li>
+                    <li><Link to="/">GALERI</Link></li>
+                    <li><Link to="/">ILETISIM</Link></li>
 
                 </div>
                 <div className="menu-toggle" onClick={toggleMenu}>
@@ -33,26 +49,3 @@ const Menu = () => {
 };
 
 export default Menu;
-
-// import React from 'react';
-
-// function Menu() {
-//     return (
-//         <nav className="menu">
-//             <div className="menu-container">
-//                 <div className="menu-logo">
-//                     <img src="tym.png" alt="Logo" />
-//                 </div>
-//                 <ul className="menu-list">
-//                     <li><a href="#">HAKKIMIZDA</a></li>
-//                     <li><a href="#">PROJELER</a></li>
-//                     <li><a href="#">UYGULAMALAR</a></li>
-//                     <li><a href="#">GALERI</a></li>
-//                     <li><a href="#">ILETISIM</a></li>
-//                 </ul>
-//             </div>
-//         </nav>
-//     );
-// }
-
-// export default Menu;

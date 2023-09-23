@@ -4,28 +4,27 @@ import {
     faFacebook,
     faTwitter,
     faInstagram,
-    faLinkedIn,
+    faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 
 function Footer() {
     return (
-        <footer>
-            <div className="social-media-icons">
-                <a href="#">
-                    <FontAwesomeIcon icon={faFacebook} size="2x" />
-                </a>
-                <a href="#">
-                    <FontAwesomeIcon icon={faTwitter} size="2x" />
-                </a>
-                <a href="#">
-                    <FontAwesomeIcon icon={faInstagram} size="2x" />
-                </a>
-                {/* <a href="#">
-                    <FontAwesomeIcon icon={faLinkedin} size="2x" />
-                </a> */}
-            </div>
-            <p>&copy; 2023 Pama Software</p>
-        </footer>
+
+        <div className="social-media-icons">
+            <a href="#">
+                <FontAwesomeIcon icon={faFacebook} size="2x" />
+            </a>
+            <a href="#">
+                <FontAwesomeIcon icon={faTwitter} size="2x" />
+            </a>
+            <a href="#">
+                <FontAwesomeIcon icon={faInstagram} size="2x" />
+            </a>
+            <a href="https://www.linkedin.com/company/tym-yap%C4%B1-i%CC%87n%C5%9Faat-san-tic-ltd-%C5%9Fti/">
+                <FontAwesomeIcon icon={faLinkedin} size="2x" />
+            </a>
+        </div>
+
     );
 }
 

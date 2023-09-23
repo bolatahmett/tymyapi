@@ -1,20 +1,26 @@
 import React from 'react';
-import Carousel from './Carousel';
+import Slider from './slider';
 import Menu from './menu';
 import Footer from './footer';
+import Aboutus from './aboutus';
+import {
+    BrowserRouter as Router,
+    Routes,
+    Route,
+    Link,
+} from "react-router-dom";
 
-const images = [
-    './home-slide/1-cephetasarim.jpg',
-    './home-slide/2-gridstone.jpg',
-    './home-slide/3-izolasyon.jpeg',
-    './home-slide/4-mimariproje.jpg'
-];
 function Home() {
 
     return (
         <div className="home">
             <Menu />
-            <Carousel images={images} />
+
+            <Routes>
+                <Route path='/' element={<Slider />} />
+                <Route path='/aboutus' element={<Aboutus />} />
+            </Routes>
+
             <Footer />
         </div>
     );

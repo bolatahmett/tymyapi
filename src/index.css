@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 code {
@@ -24,7 +24,6 @@ code {
   padding: 10px 0;
   position: fixed;
   width: 100%;
-  font-weight: 600;
   z-index: 100;
   transition: background-color 0.3s ease;
   top: 0;
@@ -68,7 +67,7 @@ code {
   text-decoration: none;
   color: #0f0d0d;
   opacity: 1;
-  font-size: 18px;
+  font-size: 22px;
   transition: color 0.3s ease;
 }
 
@@ -76,8 +75,104 @@ code {
   color: #3a3f45;
 }
 
+.menu-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li {
+  margin-bottom: 10px;
+}
+
+.menu-list a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Alt menü */
+.submenu {
+  display: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-list li:hover .submenu {
+  display: block;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+.submenu li {
+  padding: 8px;
+}
+
+.submenu a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+}
+
+.submenu li:hover a {
+  background-color: #f0f0f0;
+}
+
+
+
+/* ------------------------------------------------------------------------------- */
+
+.aboutus-content p {
+  margin: 0 0 2em;
+}
+
+.aboutus-content {
+  max-width: 28em;
+  text-align: justify;
+  margin: 0 auto;
+  padding: 2em;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  margin-top: 150px;
+}
+
+.aboutus-content h4 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.aboutus-content p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
+
+.aboutus-content ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.aboutus-content li {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+  margin-top: 5px;
+}
+
 /* Daha küçük ekranlar için menü stilini ayarla */
 @media (max-width: 768px) {
+
+  .home {
+    position: relative;
+    top: 120px;
+  }
+
   .menu {
     background-color: rgba(255, 255, 255, 0.8);
     top: 0;
@@ -145,10 +240,17 @@ code {
   .bar.open:nth-child(3) {
     transform: rotate(45deg) translate(-5px, -6px);
   }
-}
 
-.home {
-  padding-top: 100px;
+  .aboutus-content {
+    max-width: 28em;
+    text-align: justify;
+    margin: 0 auto;
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
 }
 
 footer {
@@ -163,50 +265,6 @@ footer {
 .App-header {
   text-align: center;
   font-family: "Oswald", sans-serif;
-}
-
-.carousel-images {
-  position: relative;
-  margin: auto;
-  overflow: hidden;
-  z-index: -1;
-}
-
-.carousel-images img {
-  width: 100%;
-  height: auto;
-}
-
-.slide_direction {
-  display: flex;
-  align-items: center;
-}
-
-.left,
-.right {
-  color: #fff;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 25px;
-  width: 25px;
-  background-color: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-}
-
-.left {
-  left: 20px;
-}
-
-.right {
-  right: 20px;
-}
-
-.carousel-indicator {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 20px;
 }
 
 .active {
@@ -226,6 +284,7 @@ footer {
 /* Sosyal medya iconlarının stillemesi */
 .social-media-icons {
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .social-media-icons a {
@@ -233,6 +292,7 @@ footer {
   text-decoration: none;
   margin: 0 10px;
   transition: color 0.3s ease;
+
 }
 
 .social-media-icons a:hover {
@@ -242,5 +302,6 @@ footer {
 /* Altyazı (footer yazısı) */
 footer p {
   margin-top: 14px;
-  font-size: 12px;
+  font-size: 8px;
+
 }
